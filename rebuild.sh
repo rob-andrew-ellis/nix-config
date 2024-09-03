@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source "$(pwd)/extras/spinner.sh"
+
 set -e
 
 pushd ~/nixos/
@@ -15,25 +17,15 @@ alejandra . &>/dev/null \
 
 git diff -U0 '*.nix'
 
-echo "NixOS Rebuilding..."
+start_spinner "NixOS Rebuilding..."
 
 sudo nixos-rebuild switch &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
-
-pid=$! # Process Id of the previous running command
-
-spin='-\|/'
-
-i=0
-while kill -0 $pid 2>/dev/null
-do
-  i=$(( (i+1) %4 ))
-  printf "\r${spin:$i:1}"
-  sleep .1
-done
 
 current=$(nixos-rebuild list-generations | grep current)
 
 git commit -am "$current"
+
+stop_spinner $?
 
 popd
 
