@@ -2,8 +2,6 @@
 
 set -e
 
-$EDITOR configuration.nix
-
 pushd ~/nixos/
 
 if git diff --quiet '*.nix'; then
