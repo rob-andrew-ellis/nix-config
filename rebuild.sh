@@ -17,6 +17,8 @@ git diff -U0 '*.nix'
 
 echo "NixOS Rebuilding..."
 
+sudo nixos-rebuild switch &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
+
 pid=$! # Process Id of the previous running command
 
 spin='-\|/'
@@ -28,8 +30,6 @@ do
   printf "\r${spin:$i:1}"
   sleep .1
 done
-
-sudo nixos-rebuild switch &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
 
 current=$(nixos-rebuild list-generations | grep current)
 
