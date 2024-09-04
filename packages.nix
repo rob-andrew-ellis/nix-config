@@ -25,6 +25,7 @@ in {
     pure-prompt
     pywal
     alejandra
+    nitrogen
   ];
 
   programs.steam = {
