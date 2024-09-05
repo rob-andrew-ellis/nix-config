@@ -89,25 +89,6 @@
     ];
   };
 
-  # hyprland config
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-
-  environment.systemPackages = with pkgs; [
-    (waybar.overrideAttrs (oldAttrs: {
-      mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
-    }))
-    dunst
-    mako
-    libnotify
-    swww
-    rofi-wayland
-  ];
-
-  xdg.portal.enable = true;
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
