@@ -39,6 +39,7 @@ in {
     set-light-mode
     set-dark-mode
     gnome3.gnome-tweaks
+    nordic
   ];
 
   programs.steam = {
