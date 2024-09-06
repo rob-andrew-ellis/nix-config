@@ -38,6 +38,7 @@ in {
     nitrogen
     set-light-mode
     set-dark-mode
+    nordic
   ];
 
   programs.steam = {
