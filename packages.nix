@@ -38,7 +38,6 @@ in {
     nitrogen
     set-light-mode
     set-dark-mode
-    nordic
     gnome3.gnome-tweaks
   ];
 
