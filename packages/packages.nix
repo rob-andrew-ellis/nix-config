@@ -19,8 +19,7 @@ in {
 
   environment.systemPackages = with pkgs; [
     git
-    fastfetch
-    neofetch
+    pfetch-rs
     gnumake
     unzip
     gcc
