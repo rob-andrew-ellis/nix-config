@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source "$(pwd)/scripts/spinner.sh"
+
 set -e
 
 pushd ~/nixos/
@@ -17,11 +19,13 @@ git diff -U0 '*.nix'
 
 echo "NixOS Rebuilding..."
 
-sudo nixos-rebuild switch &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
+sudo nixos-rebuild switch &>nixos-switch.log && start_spinner 'NixOS Rebuilding...' || (cat nixos-switch.log | grep --color error && exit 1)
 
 current=$(nixos-rebuild list-generations | grep current)
 
 git commit -am "$current"
+
+stop_spinner $?
 
 popd
 
