@@ -36,6 +36,7 @@ in {
     nordic
     colloid-gtk-theme
     nil
+    cargo
   ];
 
   programs.zsh = {
