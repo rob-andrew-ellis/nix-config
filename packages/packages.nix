@@ -34,6 +34,7 @@ in {
     set-light-mode
     set-dark-mode
     nordic
+    colloid-gtk-theme
   ];
 
   programs.zsh = {
