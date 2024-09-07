@@ -35,6 +35,7 @@ in {
     set-dark-mode
     nordic
     colloid-gtk-theme
+    nil
   ];
 
   programs.zsh = {
