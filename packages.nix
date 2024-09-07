@@ -40,6 +40,7 @@ in {
     set-dark-mode
     gnome3.gnome-tweaks
     nordic
+    gimp
   ];
 
   programs.steam = {
