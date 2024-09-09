@@ -20,23 +20,18 @@ in {
   environment.systemPackages = with pkgs; [
     git
     pfetch-rs
-    gnumake
     unzip
-    gcc
     ripgrep
     xclip
     nerdfonts
     unstable.neovim
     pure-prompt
     pywal
-    alejandra
     nitrogen
     set-light-mode
     set-dark-mode
     nordic
     colloid-gtk-theme
-    nil
-    cargo
   ];
 
   programs.zsh = {
