@@ -7,7 +7,7 @@
     ./hardware-configuration.nix
     ./packages/packages.nix
     ./packages/gui-apps.nix
-    ./packages/languages.nix
+    # ./packages/languages.nix
     ./environment-variables.nix
   ];
 

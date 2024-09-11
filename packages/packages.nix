@@ -31,8 +31,10 @@ in {
     set-light-mode
     set-dark-mode
     nordic
-    colloid-gtk-theme
+    ungoogled-chromium
   ];
+
+  programs.nix-ld.enable = true;
 
   programs.zsh = {
     enable = true;
