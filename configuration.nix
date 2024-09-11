@@ -7,7 +7,7 @@
     ./hardware-configuration.nix
     ./packages/packages.nix
     ./packages/gui-apps.nix
-    # ./packages/languages.nix
+    ./packages/languages.nix
     ./environment-variables.nix
   ];
 
@@ -38,6 +38,10 @@
     LC_TELEPHONE = "en_GB.UTF-8";
     LC_TIME = "en_GB.UTF-8";
   };
+
+  services.udev.extraRules = ''
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{serial}=="*vial:f64c2b3c*", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
+  '';
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;

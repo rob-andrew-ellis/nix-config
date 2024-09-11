@@ -32,6 +32,7 @@ in {
     set-dark-mode
     nordic
     ungoogled-chromium
+    vial
   ];
 
   programs.nix-ld.enable = true;
