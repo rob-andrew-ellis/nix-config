@@ -2,7 +2,15 @@
   config,
   pkgs,
   ...
-}: {
+}: let
+  vialUdevRules = pkgs.writeTextFile {
+    name = "99-vial.rules";
+    text = ''
+      KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{serial}=="*vial:f64c2b3c*", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
+    '';
+    destination = "/etc/udev/rules.d/99-vial.rules";
+  };
+in {
   imports = [
     ./hardware-configuration.nix
     ./packages/packages.nix
@@ -39,9 +47,7 @@
     LC_TIME = "en_GB.UTF-8";
   };
 
-  services.udev.extraRules = ''
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{serial}=="*vial:f64c2b3c*", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
-  '';
+  services.udev.packages = [vialUdevRules];
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
