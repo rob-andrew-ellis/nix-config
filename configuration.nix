@@ -16,6 +16,7 @@ in {
     ./packages/packages.nix
     ./packages/gui-apps.nix
     ./packages/languages.nix
+    ./packages/hyprland-pkgs.nix
     ./environment-variables.nix
   ];
 
