@@ -14,6 +14,7 @@
     grim
     slurp
     wl-clipboard
+    wlr-randr
   ];
 
   xdg.portal = {
