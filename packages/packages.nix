@@ -33,6 +33,7 @@ in {
     nordic
     ungoogled-chromium
     vial
+    gnomeExtensions.blur-my-shell
   ];
 
   programs.nix-ld.enable = true;
