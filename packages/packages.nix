@@ -26,6 +26,7 @@ in {
     nerdfonts
     unstable.neovim
     pure-prompt
+    neofetch
     pywal
     nitrogen
     set-light-mode
