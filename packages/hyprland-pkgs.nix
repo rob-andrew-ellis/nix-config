@@ -15,6 +15,7 @@
     slurp
     wl-clipboard
     wlr-randr
+    ags
   ];
 
   xdg.portal = {
