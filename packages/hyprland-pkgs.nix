@@ -16,6 +16,8 @@
     wl-clipboard
     wlr-randr
     ags
+    gtk3
+    gnome.adwaita-icon-theme
   ];
 
   xdg.portal = {
@@ -29,4 +31,6 @@
       });
     })
   ];
+
+  services.upower.enable = true;
 }
