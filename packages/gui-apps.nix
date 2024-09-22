@@ -14,6 +14,8 @@
     gimp
     gnome-extension-manager
     gradience
+    ungoogled-chromium
+    vial
   ];
 
   programs.steam = {

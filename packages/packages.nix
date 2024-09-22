@@ -31,8 +31,9 @@ in {
     nitrogen
     set-light-mode
     set-dark-mode
-    ungoogled-chromium
-    vial
+    nordic
+    whitesur-gtk-theme
+    colloid-gtk-theme
   ];
 
   programs.nix-ld.enable = true;
