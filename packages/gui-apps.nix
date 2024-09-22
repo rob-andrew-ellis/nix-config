@@ -13,6 +13,7 @@
     gnome3.gnome-tweaks
     gimp
     gnome-extension-manager
+    gradience
   ];
 
   programs.steam = {

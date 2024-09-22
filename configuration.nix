@@ -13,6 +13,7 @@ in {
     ./packages/gui-apps.nix
     ./packages/languages.nix
     ./packages/hyprland-pkgs.nix
+    ./packages/gnome-extensions.nix
     ./environment-variables.nix
   ];
 
