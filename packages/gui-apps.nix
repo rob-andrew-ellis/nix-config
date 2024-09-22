@@ -10,8 +10,6 @@
     kitty
     vesktop
     discord
-    gnome3.gnome-tweaks
-    gnome.dconf-editor
     gimp
     gnome-extension-manager
     gradience
