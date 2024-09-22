@@ -12,6 +12,7 @@
     discord
     gimp
     gnome-extension-manager
+    gnome.gnome-tweaks
     gradience
     ungoogled-chromium
     vial
