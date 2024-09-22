@@ -32,8 +32,6 @@ in {
     set-light-mode
     set-dark-mode
     nordic
-    whitesur-gtk-theme
-    colloid-gtk-theme
   ];
 
   programs.nix-ld.enable = true;
