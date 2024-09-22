@@ -32,6 +32,7 @@ in {
     set-light-mode
     set-dark-mode
     nordic
+    fzf
   ];
 
   programs.nix-ld.enable = true;
