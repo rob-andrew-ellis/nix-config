@@ -13,7 +13,6 @@
     gimp
     gnome-extension-manager
     gnome.gnome-tweaks
-    gnome.dconf-editor
     gradience
     ungoogled-chromium
     vial
