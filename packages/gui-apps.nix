@@ -9,13 +9,12 @@
     firefox
     kitty
     vesktop
-    discord
     gimp
     gnome-extension-manager
     gnome.gnome-tweaks
-    gradience
     ungoogled-chromium
     vial
+    obsidian
   ];
 
   programs.steam = {
