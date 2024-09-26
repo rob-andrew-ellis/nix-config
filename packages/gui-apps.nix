@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
@@ -15,6 +11,7 @@
     ungoogled-chromium
     vial
     obsidian
+    openrgb
   ];
 
   programs.steam = {
