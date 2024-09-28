@@ -13,6 +13,7 @@
 
     # Lua
     lua-language-server
+    stylua
 
     # Python
     pyright
