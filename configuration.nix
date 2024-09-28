@@ -17,6 +17,10 @@ in {
     ./environment-variables.nix
   ];
 
+  nix.extraOptions = ''
+    experimental-features = flakes nix-command
+  '';
+
   services.hardware.openrgb.enable = true;
 
   # Bootloader.
