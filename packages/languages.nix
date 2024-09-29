@@ -17,5 +17,8 @@
 
     # Python
     pyright
+
+    # JS/TS
+    nodejs
   ];
 }
