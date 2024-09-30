@@ -11,7 +11,6 @@
     ungoogled-chromium
     vial
     obsidian
-    openrgb
   ];
 
   programs.steam = {
