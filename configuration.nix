@@ -14,7 +14,6 @@ in {
     ./packages/languages.nix
     ./packages/hyprland-pkgs.nix
     ./packages/gnome-extensions.nix
-    ./packages/nvim-packages.nix
     ./environment-variables.nix
   ];
 
