@@ -6,6 +6,7 @@
 
     # Nix
     alejandra
+    nixpkgs-fmt
     nil
 
     # Rust
